@@ -1,0 +1,130 @@
+body {font-family: Arial, Helvetica, sans-serif;background: rgb(70, 188, 243);}
+
+
+/* Full-width input fields */
+input
+{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+
+  z-index: 1; /* Sit on top */
+  position:relative;
+  left:25%;
+  width: 50%; /* Full width */
+  height: 100%; /* Full height */
+  background:white;
+  padding-top: 50px;
+  margin-top:50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  
+  width: 80%; /* Could be more or less, depending on screen size */
+
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+select
+{
+	width:90%;
+	height: 50px;
+	background-color: transparent;
+	border-radius: 0;
+	box-shadow: none;
+	color: #323232;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	font-size: 16px;
+	line-height: 30px;
+	font-weight: 400;
+	border: 1px solid #d6d6d6;
+}
+
+.apunkatext
+{
+	position:absolute;
+	top:7%;
+	left:47.5%;
+}
+/* -------------------for mobile------------------------- */
+
+@media (max-width:1000px)
+{
+
+input
+{
+  width: 100%;
+  margin: 5px 0 22px -15px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.apunkatext
+{
+	top:8%;
+	left:46.5%;
+}
+
+/* The Modal (background) */
+.modal {
+
+  z-index: 1; /* Sit on top */
+  position:relative;
+  left:0%;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background:white;
+  padding-top: 50px;
+  margin-top:50px;
+}
+
+
+}

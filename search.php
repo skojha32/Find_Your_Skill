@@ -3,11 +3,12 @@
 <html>
     <head>
         <title>Search | Find Your Skill</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     </head>
     <body>
         <form action="search.php" method="post">
-            Search<input type="text" name="search"><br>
-            <button name="submit" type="submit">Submit</button>
+            Search<input type="text" name="search">
+            <button name="submit" class="btn btn-primary" type="submit">Submit</button>
         </form>
     </body>
 </html>
@@ -26,13 +27,44 @@ if(isset($_POST["submit"]))
                 $results[$a][0]=$data->name; 
                 $results[$a][1]=$data->email;
                 $results[$a][2]=$data->number; 
-                $results[$a][3]=$data->skills;  
+                $results[$a][3]=$data->skills;
+                $results[$a][4]=$data->github;
+                $results[$a][5]=$data->message;  
                 $a++;
         }
     }
     else{
         echo "Sorry not found";
     }
-    print_r($results);
 }
 ?>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Number</th>
+      <th scope="col">Skills</th>
+      <th scope="col">Github</th>
+      <th scope="col">Message</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <?php 
+  if(isset($_POST["submit"]))
+  {
+  for($i=0;$i<$a;$i++) { 
+?>
+    <tr>
+      <td><?php echo $results[$i][0]; ?></td>
+      <td><?php echo $results[$i][1]; ?></td>
+      <td><?php echo $results[$i][2]; ?></td>
+      <td><?php echo $results[$i][3]; ?></td>
+      <td><?php echo $results[$i][4]; ?></td>
+      <td><?php echo $results[$i][5]; ?></td>
+    </tr>
+  <?php }} ?>
+</tbody>
+</table>
