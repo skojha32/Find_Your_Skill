@@ -4,11 +4,28 @@
     <head>
         <title>Search | Find Your Skill</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <style>
+            #id01 {
+                padding: 15px;
+            }
+            #id02 {
+                border: 15px;
+            }
+        </style>
     </head>
+
     <body>
+    <div>
+      
+        </div>  
         <form action="search.php" method="post">
-            Search<input type="text" name="search">
-            <button name="submit" class="btn btn-primary" type="submit">Submit</button>
+        <div class="form-group" id="id01">
+    <label>Search:</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" name="search">
+</div>
+<center>
+            <button name="submit" id="id02" class="btn btn-primary" type="submit">Submit</button>
+            </center>
         </form>
     </body>
 </html>
